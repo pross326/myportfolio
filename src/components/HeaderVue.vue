@@ -24,13 +24,6 @@ export default {
       isMobile: false,
     };
   },
-  created() {
-    this.handleResize();
-    window.addEventListener("resize", this.handleResize);
-  },
-  unmounted() {
-    window.removeEventListener("resize", this.handleResize);
-  },
   methods: {
     handleResize() {
       this.isMobile = window.innerWidth < 768;
